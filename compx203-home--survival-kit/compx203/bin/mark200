@@ -1,0 +1,3 @@
+#!/bin/sh
+mono /home/compx203/bin/mono/COMP200Marker.exe "$1"
+

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+mono /home/compx203/bin/mono/RexSimulatorGui.exe &>/dev/null &
