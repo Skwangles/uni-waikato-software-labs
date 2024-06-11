@@ -1,0 +1,28 @@
+class IntSet{
+    private int[] set = new int[]; 
+    public void intersect(IntSet otherSet){
+	
+	
+
+
+
+
+    }
+    public void add(IntSet compared){
+      
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+}
