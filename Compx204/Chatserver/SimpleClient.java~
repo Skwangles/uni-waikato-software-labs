@@ -1,0 +1,49 @@
+//Alexander Stokes 1578409
+import java.net.*;
+import java.io.*;
+
+class SimpleClient{
+    ;
+    
+    public static void main(String[] args){
+	
+	//Address of server & port open
+	String addr = "127.0.0.1";
+	int port = 51234;
+	int numCalls = 0;
+		InetAddress ia;
+		try{//Check if server address exists/is connectable
+		    ia = InetAddress.getByName(addr);
+		}
+		catch(Exception e){
+		    System.err.println("Unknown name for ip");
+		    return;
+		}
+		
+		Socket sock;
+		try{
+		    Socket sock = new Socket(ia, port);//Connecting to server
+		    
+		    BufferedReader read = new BufferedReader(new InputStreamReader(s.getInputStream()));
+		    PrintWriter write = new PrintWriter(s.getOutputStream(), true);
+		    
+		    while(true){
+			//Configuring text reading from server
+			BufferedReader read = new BufferedReader(new 	InputStreamReader(sock.getInputStream()));
+			String line = read.readLine();
+			
+			while(line != null){//Read from server while unread lines exist
+			    line = read.readLine();
+			}
+			numCalls += 1;
+			write.println(numCalls);
+		    }
+		
+		}
+		catch(Exception e){
+		    System.err.println("Error occurred communicating to the server: " + e.toString());
+		}
+		
+		
+    }
+}

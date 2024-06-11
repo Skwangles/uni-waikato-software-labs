@@ -1,0 +1,29 @@
+Step 1
+------
+
+A: Passphrase for ca-private.pem:
+1578409
+
+B: Password for ca-cert.jks:
+ca1578409
+
+C: The CA's certificate fingerprint (SHA256) in ca-cert.jks:
+B4:6E:1A:50:50:52:94:E2:07:5D:03:64:6C:B4:94:20:FB:34:21:32:39:2F:DC:4E:D7:3C:41:9C:33:29:C5:B3
+
+Step 2
+------
+
+D: Passphrase for server.jks:
+ks1578409
+
+E: The CA's certificate fingerprint (SHA256) in server.jks:
+10:94:40:AD:E3:44:6E:9B:6A:73:01:23:7F:6A:CD:47:0F:11:F3:F0:9B:FA:F8:93:3F:AD:ED:DA:44:12:36:02
+
+Step 4
+------
+
+F: The exception from the first command:
+
+
+G: The exception from the second command:
+
