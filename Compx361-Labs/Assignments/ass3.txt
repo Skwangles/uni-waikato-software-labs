@@ -1,0 +1,16 @@
+Q1
+
+/0 /1 / lam/ 0 /1 / lam/ 0 /1 / lam/ 0 /1 / lam/ 0 /1 / lam/ 0 /1 / lam/ 
+3       /     R     ,     2    /     R       ,    1      /     lam    /    1   ,    1    /    L    ,     3    /    lam    /     L    ,     3    /     0     ,     2    /   lam    /
+10011 11111 11101 11110 10010 11111 11101 11110  10001 11111  11011  11111  <- first 60 bits
+100111111111101111101001011111111011111010001111111101111111
+M will make the 2nd bit match the 1st bit. Completes once is reaches q3 and has r/w head parked. 100 -> 110, 01 -> 00
+
+Q2
+(a) L(G) = {aaa, ab}
+(b) L(G) = {abb, abab}
+(c) L(G) = {(x|y|z + ((x|y|z)(x|y|z))* = (x|y|z + ((x|y|z)(x|y|z))*}
+{((x + y + z)^2n + x + y + z) = ((x + y + z)^2m + x + y + z) | m,n >= 0} 
+
+Q3
+
