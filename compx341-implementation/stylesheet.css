@@ -1,0 +1,29 @@
+node {
+	size: 50px; 
+}
+
+node.WifiRouter{
+	fill-color: red;
+}
+
+node.HubsOrController{
+	fill-color: blue;
+}
+
+node.SmartLighting{
+    fill-color: yellow;
+}
+
+node.SmartAppliance{
+	fill-color: pink;
+}
+
+node.SmartWhiteware{
+	fill-color: green;
+}
+
+
+edge {
+ arrow-shape: arrow;
+ arrow-size: 25px, 10px;
+}
