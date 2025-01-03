@@ -1,0 +1,11 @@
+Mark H. Jones, Jamie Bell, Daniel Dredge, Matthew Seabright, Alistair Scarfe, Mike Duke, Bruce MacDonald,
+Design and testing of a heavy-duty platform for autonomous navigation in kiwifruit orchards,
+Biosystems Engineering,
+Volume 187,
+2019,
+Pages 129-146,
+ISSN 1537-5110,
+https://doi.org/10.1016/j.biosystemseng.2019.08.019.
+(https://www.sciencedirect.com/science/article/pii/S1537511019308141)
+Abstract: Horticultural robots designed for in-field use usually require a means of transportation around orchards or farms. A common approach is to directly integrate a drive system – at the expense of increasing overall complexity. Alternatively, robots can be modularised and attached to general purpose platforms. General purpose platforms reported previously are designed to carry relatively light payloads orientated toward ground based crops. This paper presents a heavy-duty platform, capable of carrying modules of up to 1000 kg, beneath 1.4 m high pergola-style kiwifruit canopies. We discuss the design of the vehicle's software, electrical system, and mechanical structure. Sensors suitable for autonomous navigation are evaluated in-orchard and tested with prototype algorithms. Row following trials show a repeatability of within ±75 mm using only a multi-layer lidar. With a method of automatically turning between rows, the vehicle traversed over 10 km of orchard rows unassisted.
+Keywords: Agricultural automation; Autonomous navigation; Sensor selection

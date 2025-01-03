@@ -1,0 +1,11 @@
+Henry A.M. Williams, Mark H. Jones, Mahla Nejati, Matthew J. Seabright, Jamie Bell, Nicky D. Penhall, Josh J. Barnett, Mike D. Duke, Alistair J. Scarfe, Ho Seok Ahn, JongYoon Lim, Bruce A. MacDonald,
+Robotic kiwifruit harvesting using machine vision, convolutional neural networks, and robotic arms,
+Biosystems Engineering,
+Volume 181,
+2019,
+Pages 140-156,
+ISSN 1537-5110,
+https://doi.org/10.1016/j.biosystemseng.2019.03.007.
+(https://www.sciencedirect.com/science/article/pii/S153751101830638X)
+Abstract: As labour requirements in horticultural become more challenging, automated solutions are becoming an effective approach to maintain productivity and quality. This paper presents the design and performance evaluation of a novel multi-arm kiwifruit harvesting robot designed to operate autonomously in pergola style orchards. The harvester consists of four robotic arms that have been designed specifically for kiwifruit harvesting, each with a novel end-effector developed to enable safe harvesting of the kiwifruit. The vision system leverages recent advances in deep neural networks and stereo matching for reliably detecting and locating kiwifruit in real-world lighting conditions. Furthermore, a novel dynamic fruit scheduling system is presented that has been developed to coordinate the four arms throughout the harvesting process. The performance of the harvester has been measured through a comprehensive and realistic field-trial in a commercial orchard environment. The results show that the presented harvester is capable of successfully harvesting 51.0% of the total number of kiwifruit within the orchard with an average cycle time of 5.5s/fruit.
+Keywords: Horticulture; Robotics; Neural Networking; Machine Vision; Harvesting; Convolution Neural Networks; Orchard
