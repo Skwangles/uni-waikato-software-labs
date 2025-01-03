@@ -1,0 +1,31 @@
+graph { 
+    }
+    
+    node {
+        size: 35px; 
+    }
+    
+    node.Router{
+        fill-color: red;
+    } 
+    
+    node.Hub{
+        fill-color: Blue;
+    }
+
+    node.Light{
+        fill-color: Yellow;
+    }
+    
+    node.Appliance{
+        fill-color: Pink;
+    }
+
+    node.Whiteware{
+        fill-color: Green;
+    }
+    
+    edge.canSend {
+     arrow-shape: arrow; 
+     arrow-size: 20px, 10px; 
+    }

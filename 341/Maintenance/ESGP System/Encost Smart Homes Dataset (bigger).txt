@@ -1,0 +1,21 @@
+Device ID,Date Connected,Device name,Device type,Household ID,Router Connection,Sends,Receives
+EWR-1234,01/04/22,Encost Router 360,Router,WKO-1234,-,Yes,Yes
+ELB-4567,01/04/22,Encost Smart Bulb B22 (multi colour),LightBulb,WKO-1234,EWR-1234,No,Yes
+EK-9876,07/05/22,Encost Smart Jug,Kettle,WKO-1234,EWR-1234,No,Yes
+EHC-2468,01/04/22,Encost Smart Hub 2.0,HubController,WKO-1234,EWR-1234,Yes,Yes
+EWR-2345,07/01/23,Encost Router 360,Router,WKO-2345,-,Yes,Yes
+EWE-2345,07/01/23,Encost Wifi Range Extender 1.0,Extender,WKO-2345,EWR-2345,Yes,Yes
+ET-6549,07/01/23,Encost Smart Toaster (4 slice),Toaster,WKO-2345,EWR-2345,No,Yes
+EK-2548,07/01/23,Encost Smart Jug,Kettle,WKO-2345,EWR-2345,No,Yes
+EHC-3495,07/01/23,Encost Smart Hub 2.0,HubController,WKO-2345,EWR-2345,Yes,Yes
+ELB-9761,07/01/23,Encost Smart Bulb B22 (multi colour),LightBulb,WKO-2345,EWE-2345,No,Yes
+ELB-3496,07/01/23,Encost Smart Bulb B22 (multi colour),LightBulb,WKO-2345,EWE-2345,No,Yes
+ELB-6477,07/01/23,Encost Smart Bulb B22 (multi colour),LightBulb,WKO-2345,EWE-2345,No,Yes
+EWR-3456,28/03/23,Encost Router 360,Router,WKO-3456,-,Yes,Yes
+EOL-9761,28/03/23,Encost Novelty Light (giraffe),OtherLighting,WKO-3456,EWR-3456,No,Yes
+EOL-3496,28/03/23,Encost Novelty Light (lion),OtherLighting,WKO-3456,EWR-3456,No,Yes
+EOL-6477,28/03/23,Encost Novelty Light (bear),OtherLighting,WKO-3456,EWR-3456,No,Yes
+EWR-4567,18/05/23,Encost Router 360,Router,WKO-4567,-,Yes,Yes
+ERF-3558,18/05/23,Encost Smart Refrigerator,RefrigeratorOrFreezer,WKO-4567,EWR-4567,No,Yes
+ECM-3858,18/05/23,Encost Smart Coffee Maker Pro,CoffeeMaker,WKO-4567,EWR-4567,No,Yes
+EWMD-7916,18/05/23,Encost Smart Washer,WashingMachineOrDryer,WKO-4567,EWR-4567,No,Yes
