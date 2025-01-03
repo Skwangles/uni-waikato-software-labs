@@ -14,14 +14,14 @@ public class InvertedIndexReducer extends Reducer<Text, Text, Text, Text>{
     private String lineInfoSplitChar = ",";
     private Text result = new Text();
     static enum CountersEnum {NUM_INDIVIDUAL_WORDS, LINES_PRINTED}
-    //input: k:'word', v: 'doc;loc/idx,loc/idx|doc;loc/idx,loc/idx|...
+    //input: k:'word', v: '#|doc; doccount; loc, idx; loc, idx|doc;count;loc, idx...
     public void reduce(Text key, Iterable<Text> inputValues,
                        Context context) throws IOException, InterruptedException {
-                        StringBuilder docLineBreakdown = new StringBuilder();
+
                         context.getCounter(CountersEnum.NUM_INDIVIDUAL_WORDS).increment(1);
                         context.getCounter("Words of Length", String.valueOf(key.getLength())).increment(1);
-                        HashMap<String, StringBuilder> documents = new HashMap<String, StringBuilder>();
 
+                        HashMap<String, StringBuilder> documents = new HashMap<String, StringBuilder>();
                         for (Text text : inputValues) {
 
                             //Split individual documents and load into hashmap
@@ -34,7 +34,7 @@ public class InvertedIndexReducer extends Reducer<Text, Text, Text, Text>{
                                     documents.get(idAndLineInfo[0]).append(lineInfoSplitChar).append(idAndLineInfo[1]); // ,loc/idx
                                 }
                                 else {
-                                    documents.put(idAndLineInfo[0],new StringBuilder(idAndLineInfo[1]));
+                                    documents.put(idAndLineInfo[0], new StringBuilder().append(idAndLineInfo[1]));
                                 }
 
                             }
@@ -42,7 +42,7 @@ public class InvertedIndexReducer extends Reducer<Text, Text, Text, Text>{
                         }
                 
                 
-                        docLineBreakdown.setLength(0);
+                        StringBuilder docLineBreakdown = new StringBuilder();
                         int wordSum = 0;
 
                         //Print out contents of hashmap in submission specified format
@@ -60,8 +60,7 @@ public class InvertedIndexReducer extends Reducer<Text, Text, Text, Text>{
                         }
 
                         //Prepend word count over all documents
-                        docLineBreakdown.insert(0, wordSum + "\n");
-                        result.set(docLineBreakdown.toString());
+                        result.set(new StringBuilder(wordSum).append("\n").append(docLineBreakdown).toString());
                         context.getCounter(CountersEnum.LINES_PRINTED).increment(1);
 
                         context.write(key, result);

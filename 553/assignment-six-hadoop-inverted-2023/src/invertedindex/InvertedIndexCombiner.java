@@ -33,7 +33,7 @@ public class InvertedIndexCombiner extends Reducer<Text, Text, Text,Text> {
                 documentEntries.get(idAndLineInfo[0]).append(lineInfoSplitChar).append(lineInfo[0]).append(locIdxSplitChar).append(lineInfo[1]); // ,loc/idx
             }
             else {
-                documentEntries.put(idAndLineInfo[0], new StringBuilder(lineInfo[0]).append(locIdxSplitChar).append(lineInfo[1])); //loc/idx
+                documentEntries.put(idAndLineInfo[0], new StringBuilder().append(lineInfo[0]).append(locIdxSplitChar).append(lineInfo[1])); //loc/idx
             }
 
         }

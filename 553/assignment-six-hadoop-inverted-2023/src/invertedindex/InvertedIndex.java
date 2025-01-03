@@ -4,6 +4,7 @@ package invertedindex;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.conf.Configured;
+import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.*;
 import org.apache.hadoop.mapreduce.Job;
@@ -38,7 +39,7 @@ public class InvertedIndex extends Configured implements Tool{
 			 job.setOutputKeyClass(Text.class);
 			 job.setOutputValueClass(Text.class);//Holds info
 
-			 job.setNumReduceTasks(1);
+			 job.setNumReduceTasks(30);
 
 			 job.setSortComparatorClass(InvertedIndexComparator.class);
 			 job.setPartitionerClass(InvertedIndexPartitioner.class);
@@ -49,6 +50,7 @@ public class InvertedIndex extends Configured implements Tool{
 			 job.setInputFormatClass(TextInputFormat.class);
 			 job.setOutputFormatClass(TextOutputFormat.class);
 
+			 job.addCacheFile(new Path("stop_words.txt").toUri());
 			 FileInputFormat.setInputPaths(job, new Path(args[0]));
 			 FileOutputFormat.setOutputPath(job, new Path(args[1]));
 

@@ -7,7 +7,6 @@ import org.apache.hadoop.mapreduce.Mapper;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -67,7 +66,7 @@ public class InvertedIndexMapper extends Mapper<LongWritable, Text, Text, Text>{
         String documentId = lines[0].substring(14).replace("\">", "");
 
         context.getCounter(CountersEnum.DOCUMENTS_COUNT).increment(1);
-        StringBuilder lineBuilder = new StringBuilder();
+
         //Parse each line
         for(int i = 1; i < lines.length; i++) {
             context.getCounter(CountersEnum.INPUT_LINES).increment(1);
@@ -76,21 +75,19 @@ public class InvertedIndexMapper extends Mapper<LongWritable, Text, Text, Text>{
             //Parse each word in each line
             for (int j = 0; j < words.length; j++ )
             {
-
                 String word = words[j];
 
                 context.getCounter(CountersEnum.INPUT_WORDS).increment(1);
 
                 //Filter out stop words, handling case where capitalisation is different
-                if (stopWords.stream().anyMatch(word::equalsIgnoreCase)) {
+                if (stopWords.contains(word) || stopWords.contains(word.toLowerCase())) {
                     context.getCounter(CountersEnum.STOPPED_WORDS).increment(1);
                     continue;
                 }
 
-                lineBuilder.setLength(0);
                 //Set Output
                 outputKey.set(word);
-                outputValue.set(lineBuilder.append(documentId).append(docAndLineSplitChar).append(i-1).append(locIdxSplitChar).append(j).toString());//doc;loc/idx
+                outputValue.set(new StringBuilder().append(documentId).append(docAndLineSplitChar).append(i-1).append(locIdxSplitChar).append(j).toString());//doc;loc/idx
                 context.write(outputKey, outputValue);
             }
         }
