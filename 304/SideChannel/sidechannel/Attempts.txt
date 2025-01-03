@@ -1,0 +1,3 @@
+Tried writing in C using an Array 'int array[1024*1024*2]' but it would segfault being too large on the stack, so I switched to doing heap allocations.
+
+ 

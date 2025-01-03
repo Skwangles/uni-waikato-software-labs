@@ -1,0 +1,7 @@
+HAML_router# traceroute 84.156.0.1
+traceroute to 84.156.0.1 (84.156.0.1), 64 hops max
+  1   84.0.2.2  2.068ms  2.075ms  2.051ms 
+  2   84.156.0.1  22.136ms  22.168ms  22.058ms 
+
+
+

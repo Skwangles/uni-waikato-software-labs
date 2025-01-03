@@ -1,0 +1,15 @@
+ALL STEPS COMPLETED - #4? i.e. Fully completed
+
+
+Issues, and steps to resolve:
+Had issues getting IBGP to share routes outside of the blackhole via bgp - was only sharing the route locations, instead of the AS numbers.
+
+Initally only setup BGP with the link addresses, so was wondering why everything never shared their BGP routes - upon rereading the specification, I found we were supposed to use the 'loopback' address!
+
+Had an issue getting the community-list to still advertise the internal routes along side the community list - so I had to experiment and change tact. 
+I first tried to use community-list deny, but because internal routes did NOT have a community-value, the community-list would return deny as default if none matched. 
+I instead did a 'deny' route FIRST, then did a default 'permit' route to catch all remaining community items (as first, i didn't add the 'permit' route, so everything got consumed by the implicit deny route-map). 
+
+
+
+

@@ -1,0 +1,24 @@
+
+Implementation: 
+	Community values:
+		84:1 - Provider
+		84:2 - Customer
+		84:3 - Peer
+	In each router corresponding to its relationship, the community value of all 'in' routes was set with `set community 84:X` - this route-map was ONLY attached to the eBGP neighbor.
+	For each router a route-map for 'out' was set to the eBGP neighbor
+	IXP:
+		All 'in' routes were tagged with 84:3 (Peer type)
+		All 'out' routes were denied with community-value 84:1 or 84:3 - if not, then a 'permit' route (following in Seq #) accepted it. (Community values for IXP were set in default 'permit' route)
+	Customers:
+		All 'in' routes were tagged with 84:2
+		All 'out' routes were permitted (Customers get everything)
+	Peers: 
+		All 'in' routes were tagged with 84:3
+		All 'out' routes were denied with community-value 84:1 or 84:3 - if not, then a 'permit' route (following in Seq #) accepted it.
+	Providers:
+		All 'in' routes were tagged with 84:1
+		All 'out' routes were denied with community-value 84:1 or 84:3 - if not, then a 'permit' route (following in Seq #) accepted it.
+		
+Images:
+See 81pre (before policy) and 81post - Minor difference
+See 125pre and 125 post for an illustration of operation - Most noticable difference
